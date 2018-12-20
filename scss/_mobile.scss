@@ -1,8 +1,16 @@
 // Wide screens
-@include mediaXl {}
+@include mediaXl {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 // Desktop and Laptops
-@include mediaLg {}
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 // tablet and small laptops
 @include mediaMd {
@@ -41,11 +49,17 @@
         grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
         grid-template-columns: 1fr;
     }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // smart phones
 @include mediaSm {
     main#home h1.lg-heading {
         margin-top: 10vh;
+    }
+    .projects {
+        grid-template-columns: 1fr;
     }
 }
